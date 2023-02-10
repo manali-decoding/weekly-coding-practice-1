@@ -802,3 +802,128 @@
 // }
 
 // console.log(buildFrequencyMap([4, 5, 4, 5, 6]));
+
+// // ---------------------------------------------------
+// // 2/10/23
+// // ---------------------------------------------------
+
+// //Find maximum number from a list of numbers
+// // findMax([2, 4, 6, 100, 2, 8]) => 100
+
+// function findMax(arr) {
+//   let max = 0;
+//   for (let index = 0; index < arr.length; index++) {
+//     if (arr[index] > max) {
+//       max = arr[index];
+//     }
+//   }
+//   return max;
+// }
+
+// console.log(findMax([2, 4, 6, 100, 2, 8]));
+
+// // Return a list of keys from object
+// // getKeys({myName: "A", age: 44}) => [“name”, “age”]
+
+// function getKeys(x) {
+//   let arr = [];
+//   for (const key in x) {
+//     arr.push(key);
+//   }
+//   return arr;
+// }
+
+// console.log(getKeys({ myName: 'A', age: 44 }));
+
+// //Check if all numbers in an array are below a threshold (second parameter)
+// // checkThreshold([4, 5, 67, 100, 6, 9], 50) => false
+
+// function checkThreshold(arr, num) {
+//   for (let index = 0; index < arr.length; index++) {
+//     if (arr[index] > num) {
+//       return false;
+//     }
+//   }
+//   return true;
+// }
+
+// console.log(checkThreshold([4, 5, 6, 10, 6, 9], 50));
+
+// //Add all even numbers from the list of numbers
+// // addEvens([4, 5, 67, 100, 9]) => 104
+
+// function addEvens(arr) {
+//   let sum = 0;
+//   for (let index = 0; index < arr.length; index++) {
+//     if (arr[index] % 2 === 0) {
+//       sum += arr[index];
+//     }
+//   }
+//   return sum;
+// }
+
+// console.log(addEvens([4, 5, 67, 100, 9]));
+
+// //Add all numbers from the list of numbers, even or odd based on second parameter (onlyEven)
+// // addNums([4, 5, 67, 100, 9], true) => 104
+
+// function addNums(arr, bool) {
+//   let sumOfEvens = 0;
+//   for (let index = 0; index < arr.length; index++) {
+//     if (arr[index] % 2 === 0 && bool === true) {
+//       sumOfEvens += arr[index];
+//     } else if (arr[index] % 2 !== 0 && bool === false) {
+//       sumOfEvens += arr[index];
+//     }
+//   }
+//   return sumOfEvens;
+// }
+// console.log(addNums([4, 5, 6, 100, 9], false));
+
+// //Add two lists. Assume that the first array is shorter in length.
+// // addLists([2, 4], [5, 6]) => [7, 10]
+
+// function addLists(arr1, arr2) {
+//   let newArr = [];
+//   for (let index = 0; index < arr1.length; index++) {
+//     newArr.push(arr1[index] + arr2[index]);
+//   }
+//   return newArr;
+// }
+
+// console.log(addLists([2, 4], [5, 6, 6]));
+
+// // Check if a list has any duplicates
+// // hasDups([4, 5, 67, 100, 9]) => false
+
+// function hasDups(arr) {
+//   let a = {};
+//   for (let index = 0; index < arr.length; index++) {
+//     if (arr[index] in a) {
+//       return true;
+//     } else {
+//       a[arr[index]] = 1;
+//     }
+//   }
+//   return false;
+// }
+
+// console.log(hasDups([4, 5, 4, 67, 100, 9]));
+// /* Return a map (hashtable/object) of number as the key, and value as the number of times it occurs in a list
+// buildFrequencyMap([4, 5, 4, 5, 6]) => { 4: 2, 5: 2, 6 : 1}
+
+// buildFrequencyMap([4, 5, 8, 5]) => {4 : 1, 5: 2, 8 : 1} */
+
+// function buildFrequencyMap(arr) {
+//   let a = {};
+//   for (let index = 0; index < arr.length; index++) {
+//     if (arr[index] in a) {
+//       a[arr[index]] = a[arr[index]] + 1;
+//     } else {
+//       a[arr[index]] = 1;
+//     }
+//   }
+//   return a;
+// }
+
+// console.log(buildFrequencyMap([4, 5, 8, 5, 3, 8, 8]));

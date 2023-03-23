@@ -2607,3 +2607,39 @@ var mySchool = {
 // }
 
 // console.log(buildHashTable(['myName', 'vyom', 'age', 13]));
+
+// let counter = 0;
+// function increment() {
+//   counter++;
+//   return counter;
+// }
+
+// console.log(increment());
+// console.log(increment());
+
+class Count {
+  constructor(b) {
+    this.count = b;
+  }
+  increaseCount() {
+    this.count += 1;
+    return this.count;
+  }
+}
+
+const counter = new Count(0);
+console.log(counter.increaseCount());
+console.log(counter.increaseCount());
+console.log(counter.increaseCount());
+
+class Decrement extends Count {
+  constructor()
+}
+
+// console.log(counter.count);
+
+// counter.increaseCount();
+// console.log(counter.count);
+
+// counter.increaseCount();
+// console.log(counter.count);

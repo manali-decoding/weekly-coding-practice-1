@@ -205,3 +205,5 @@ let numbersArr = [
 // 6. Read about closures
 // http://www.w3schools.com/js/js_function_closures.asp
 // Try to convert 'increment' example from yesterday using a function closure instead of global variable
+
+//adding for commiting

@@ -1,0 +1,11 @@
+1. Function that takes a parameter which is an array of numbers (or anything) and prints each element. 
+   hint (testing this function will need you to create an array literal)
+
+2. Function that takes a parameter which is an array of numbers (or anything) and prints each element in reverse order.
+
+3. Function takes parameter which is an array of numbers and RETURNS another array which only contains even elements from the input array
+e.g parameter array [2,5,6,7,9] => returned array [2,6]
+    (hint : Inside this function you'll need to create a new array to hold result and use .push to populate it with even numbers
+     even number test is n % 2 == 0)
+
+4. Same as 3 but new function that returns an odd numbered array

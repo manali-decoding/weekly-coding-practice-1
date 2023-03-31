@@ -2617,24 +2617,24 @@ var mySchool = {
 // console.log(increment());
 // console.log(increment());
 
-class Count {
-  constructor(b) {
-    this.count = b;
-  }
-  increaseCount() {
-    this.count += 1;
-    return this.count;
-  }
-}
+// class Count {
+//   constructor(b) {
+//     this.count = b;
+//   }
+//   increaseCount() {
+//     this.count += 1;
+//     return this.count;
+//   }
+// }
 
-const counter = new Count(0);
-console.log(counter.increaseCount());
-console.log(counter.increaseCount());
-console.log(counter.increaseCount());
+// const counter = new Count(0);
+// console.log(counter.increaseCount());
+// console.log(counter.increaseCount());
+// console.log(counter.increaseCount());
 
-class Decrement extends Count {
-  constructor()
-}
+// class Decrement extends Count {
+//   constructor()
+// }
 
 // console.log(counter.count);
 
@@ -2643,3 +2643,211 @@ class Decrement extends Count {
 
 // counter.increaseCount();
 // console.log(counter.count);
+
+// // ---------------------------------------------------
+// // 3/29/23
+// // ---------------------------------------------------
+
+// //Find maximum number from a list of numbers
+// // findMax([2, 4, 6, 100, 2, 8]) => 100
+
+// function findMax(arr) {
+//   let max = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] > max) {
+//       max = arr[i];
+//     }
+//   }
+//   return max;
+// }
+
+// console.log(findMax([2, 4, 6, 100, 2, 8]));
+
+// // Return a list of keys from object
+// // getKeys({myName: "A", age: 44}) => [“name”, “age”]
+
+// function getKeys(a) {
+//   return Object.keys(a);
+// }
+
+// console.log(getKeys({ myName: 'A', age: 44 }));
+
+// //Check if all numbers in an array are below a threshold (second parameter)
+// // checkThreshold([4, 5, 67, 100, 6, 9], 50) => false
+
+// function checkThreshold(arr, num) {
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] > num) {
+//       return false;
+//     }
+//   }
+//   return true;
+// }
+// console.log(checkThreshold([4, 5, 7, 10, 6, 9], 50));
+
+// //Add all even numbers from the list of numbers
+// // addEvens([4, 5, 67, 100, 9]) => 104
+
+// function addEvens(arr) {
+//   let allEvenNums = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] % 2 === 0) {
+//       allEvenNums += arr[i];
+//     }
+//   }
+//   return allEvenNums;
+// }
+
+// console.log(addEvens([4, 5, 67, 100, 9]));
+
+// //Add all numbers from the list of numbers, even or odd based on second parameter (onlyEven)
+// // addNums([4, 5, 67, 100, 9], true) => 104
+
+// function addNums(arr, param) {
+//   let sum = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] % 2 === 0 && param === true) {
+//       sum += arr[i];
+//     } else if (arr[i] % 2 !== 0 && param === false) {
+//       sum += arr[i];
+//     }
+//   }
+//   return sum;
+// }
+
+// console.log(addNums([4, 5, 67, 100, 9], false));
+
+// //Add two lists. Assume that the first array is shorter in length.
+// // addLists([2, 4], [5, 6]) => [7, 10]
+
+// function addLists(arr1, arr2) {
+//   let sumArr = [];
+
+//   for (let i = 0; i < arr1.length; i++) {
+//     sumArr.push(arr1[i] + arr2[i]);
+//   }
+//   return sumArr;
+// }
+
+// console.log(addLists([2, 4], [5, 6]));
+
+// // Check if a list has any duplicates
+// // hasDups([4, 5, 67, 100, 9]) => false
+
+// function hasDups(arr) {
+//   let x = {};
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] in x) {
+//       return true;
+//     } else {
+//       x[arr[i]] = 1;
+//     }
+//   }
+//   return false;
+// }
+
+// console.log(hasDups([4, 5, 67, 100, 9]));
+
+// /* Return a map (hashtable/object) of number as the key, and value as the number of times it occurs in a list
+// buildFrequencyMap([4, 5, 4, 5, 6]) => { 4: 2, 5: 2, 6 : 1}
+
+// buildFrequencyMap([4, 5, 8, 5]) => {4 : 1, 5: 2, 8 : 1} */
+
+// function buildFrequencyMap(arr) {
+//   let x = {};
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] in x) {
+//       x[arr[i]] = x[arr[i]] + 1;
+//     } else {
+//       x[arr[i]] = 1;
+//     }
+//   }
+//   return x;
+// }
+
+// console.log(buildFrequencyMap([4, 5, 8, 5]));
+
+// // ---------------------------------------------------
+// // DRILLS II - 3/29/23
+// // ---------------------------------------------------
+
+// Filter out even numbers
+// filterEven([2, 4, 5, 101, 9, 8]) => [2, 4, 8]
+
+// function filterEven(arr) {
+//   let allEvens = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] % 2 === 0) {
+//       allEvens.push(arr[i]);
+//     }
+//   }
+//   return allEvens;
+// }
+
+// console.log(filterEven([2, 4, 5, 101, 9, 8]));
+
+// Return a list of values from object
+// getValues({myName: 'A', age: 44}) => [“A”, “44”]
+
+// function getValues(x) {
+//   let array = [];
+//   for (const key in x) {
+//     array.push(x[key]);
+//   }
+//   return array;
+// }
+
+// console.log(getValues({ myName: 'A', age: 44 }));
+
+// Function takes two arrays as parameters. Return the larger sum of the elements of the two arrays
+// getMaxSum([2, 4], [5, 6]) => 11
+
+// getMaxSum([100, 4], [5, 6, 80]) => 104
+
+// function getMaxsum(arr1, arr2) {
+//   let sum1 = 0;
+//   let sum2 = 0;
+//   for (let i = 0; i < arr1.length; i++) {
+//     sum1 += arr1[i];
+//   }
+
+//   for (let j = 0; j < arr2.length; j++) {
+//     sum2 += arr2[j];
+//   }
+
+//   if (sum1 > sum2) {
+//     return sum1;
+//   } else {
+//     sum2;
+//   }
+// }
+
+// console.log(getMaxsum([100, 4], [5, 6, 80]));
+
+// Filter array elements based on the predicate (function) passed as the second argument
+// filter([4, 5, 67, 100, 9], e => e % 2 == 0) => [4, 100]
+
+// filter([4, 5, 67, 100, 9], e => e > 50) => [67, 100]
+// function filter(arr, predicate) {
+//   let newArr = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     if (predicate(arr[i])) {
+//       newArr.push(arr[i]);
+//     }
+//   }
+//   return newArr;
+// }
+// console.log(filter([4, 5, 67, 100, 9], (e) => e % 5 === 0));
+
+// Build a HashTable / Object from a list of numbers. Assume even number of elements
+// buildHashTable([“name”, “vyom”, “age”, 13]) => { “name” : “vyom”, “age”: 13 }
+
+// function buildHashTable(arr) {
+//   let x = {};
+//   for (let i = 0; i < arr.length; i++) {
+//     x[arr[i]] = arr[i + 1];
+//     i++;
+//   }
+//   return x;
+// }
+// console.log(buildHashTable(['myName', 'Vyom', 'age', 13]));
